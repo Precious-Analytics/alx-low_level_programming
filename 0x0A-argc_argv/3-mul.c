@@ -1,23 +1,18 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 /**
  * main - multiples two numbers
  * @argc: size of argument
  * @argv: array of arguments
- * Return: 0(success), 1(failure)
+ * Return: (0) success, (1) fail
 */
 int main(int argc, char *argv[])
 {
-	int result, num1, num2;
-
 	if (argc > 3 || argc < 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	num1 = argv[1];
-	num2 = argv[2];
-	result = num1 & num2;
-	printf("d%\n", result);
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
